@@ -12,9 +12,10 @@ import { CODE_SNIPPETS } from './Constants';
 import { executeCode } from "./api";
 import Canvas from './Canvas';
 
+const CLIENT_URL = process.env.REACT_APP_CLIENT_URL;
 
 
-const socket = io('http://localhost:5000');
+const socket = io(CLIENT_URL);
 
 const Task = () => {
   const { taskId, projectId } = useParams();

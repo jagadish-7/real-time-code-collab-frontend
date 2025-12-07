@@ -4,10 +4,14 @@ import io from 'socket.io-client';
 import $ from "jquery"; // Reintroduce jQuery
 import './canvas.css';
 
+const CLIENT_URL = process.env.REACT_APP_CLIENT_URL;
+
+
 // Connect to the server
-const socket = io('http://localhost:5000'); // Adjust the URL as needed
+const socket = io(CLIENT_URL); // Adjust the URL as needed
 
 export default function Canvas({ taskId, userId }) {
+    console.log(CLIENT_URL);
     const [isDrawing, setIsDrawing] = useState(false);
     const [color, setColor] = useState("#3B3B3B");
     const [size, setSize] = useState("3");

@@ -1,4 +1,5 @@
 import { io } from 'socket.io-client';
+const CLIENT_URL = process.env.REACT_APP_CLIENT_URL;
 
 export const initSocket = async () => {
     const options = {
@@ -7,5 +8,5 @@ export const initSocket = async () => {
         timeout: 10000,
         transports: ['websocket'],
     };
-    return io('http://localhost:5000', options);
+    return io(CLIENT_URL, options);
 };

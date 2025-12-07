@@ -1,7 +1,10 @@
 // src/services/taskServices.js
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/tasks';
+const CLIENT_URL = process.env.REACT_APP_CLIENT_URL;
+
+
+const API_URL = `${CLIENT_URL}/api/tasks`;
 
 const getTasks = async (projectId) => {
   const token = localStorage.getItem('token');

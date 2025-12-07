@@ -1,6 +1,8 @@
 import axios from 'axios';
+const CLIENT_URL = process.env.REACT_APP_CLIENT_URL;
 
-const API_URL = 'http://localhost:5000/api/projects';
+
+const API_URL = `${CLIENT_URL}/api/projects`;
 
 const getProjects = async () => {
   const token = localStorage.getItem('token');

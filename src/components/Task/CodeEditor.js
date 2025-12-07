@@ -3,7 +3,10 @@ import { io } from 'socket.io-client';
 import MonacoEditor from '@monaco-editor/react';
 import taskService from '../../services/taskService';
 
-const socket = io('http://localhost:5000');
+const CLIENT_URL = process.env.REACT_APP_CLIENT_URL;
+
+
+const socket = io(CLIENT_URL);
 
 const CodeEditor = ({ taskId, viewOnly }) => {
   const [code, setCode] = useState('');
