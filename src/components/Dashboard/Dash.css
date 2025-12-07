@@ -1,0 +1,16 @@
+
+
+.all-editor-content{
+    display: flex;
+}
+
+.dashboard-compiler-output{
+    width: 340px;
+}
+
+.dashboard-compiler-output h3{
+    margin: 0;
+    margin-bottom: 12px;
+    margin-left: 10px;
+    margin-top: 5px;
+}

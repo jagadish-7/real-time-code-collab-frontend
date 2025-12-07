@@ -1,0 +1,1574 @@
+
+
+iframe#webpack-dev-server-client-overlay{display:none!important}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+
+
+
+
+
+/* APP STYLING STARTS HERE  */
+
+
+body {
+  background-color: black;
+  color: white;
+  scroll-behavior: smooth;
+  font-family: "Rubik", sans-serif;
+  
+
+}
+
+
+
+
+/* ------------------------Dashboard Component Styling-------------- */
+
+
+.dash-all-content {
+  background-color: black;
+  padding-left: 40px;
+  padding-top: 40px;
+
+}
+
+
+/* -----------------------------SIDEBAR STYLING------------------------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 220px;
+  background: #010102;
+  z-index: 100;
+  transition: all 0.5s ease;
+}
+
+.sidebar.close {
+  width: 78px;
+}
+
+.sidebar .logo-details {
+  margin-top: 5px;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar .logo-details i {
+  font-size: 30px;
+  color: #fff;
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.sidebar .logo-details .logo_name {
+  /* padding-left: 15px; */
+  margin-left: -10px;
+  font-size: 22px;
+  color: #e2e2e2;
+  font-weight: 600;
+  transition: 0.3s ease;
+  transition-delay: 0.1s;
+  display: flex;
+}
+
+.sidebar .logo-details .logo_name .logo-icon{
+  margin: 5px 4px;
+}
+
+.sidebar.close .logo-details .logo_name {
+  transition-delay: 0s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .nav-links {
+  height: 100%;
+  padding: 30px 0 150px 0;
+  overflow: auto;
+}
+
+.sidebar.close .nav-links {
+  overflow: visible;
+}
+
+.sidebar .nav-links::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar .nav-links li {
+  position: relative;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li:hover {
+  background: #1d1b31;
+}
+
+.sidebar .nav-links li .iocn-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar.close .nav-links li .iocn-link {
+  display: block
+}
+
+.sidebar .nav-links li i {
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li.showMenu i.arrow {
+  transform: rotate(-180deg);
+}
+
+.sidebar.close .nav-links i.arrow {
+  display: none;
+}
+
+.sidebar .nav-links li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sidebar .nav-links li a .link_name {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.sidebar.close .nav-links li a .link_name {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .nav-links li .sub-menu {
+  padding: 6px 6px 14px 80px;
+  margin-top: -10px;
+  background: #1d1b31;
+  display: none;
+}
+
+.sidebar .nav-links li.showMenu .sub-menu {
+  display: block;
+}
+
+.sidebar .nav-links li .sub-menu a {
+  color: #fff;
+  font-size: 15px;
+  padding: 5px 0;
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li .sub-menu a:hover {
+  opacity: 1;
+}
+
+.sidebar.close .nav-links li .sub-menu {
+  position: absolute;
+  left: 100%;
+  top: -10px;
+  margin-top: 0;
+  padding: 10px 20px;
+  border-radius: 0 6px 6px 0;
+  opacity: 0;
+  display: block;
+  pointer-events: none;
+  transition: 0s;
+}
+
+.sidebar.close .nav-links li:hover .sub-menu {
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li .sub-menu .link_name {
+  display: none;
+}
+
+.sidebar.close .nav-links li .sub-menu .link_name {
+  font-size: 18px;
+  opacity: 1;
+  display: block;
+}
+
+.sidebar .nav-links li .sub-menu.blank {
+  opacity: 1;
+  pointer-events: auto;
+  padding: 3px 20px 6px 16px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .nav-links li:hover .sub-menu.blank {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.one {
+  width: 80%;
+  margin-left: 10%;
+  background-color: black;
+  height: 400px;
+}
+
+.profile-details {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1d1b31;
+  padding: 12px 0;
+  transition: all 0.5s ease;
+}
+
+
+.sidebar.close .profile-details {
+  background: none;
+}
+
+.sidebar.close .profile-details {
+  width: 78px;
+}
+
+.sidebar .profile-details .profile-content {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .profile-details img {
+  height: 52px;
+  width: 52px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 0 14px 0 12px;
+  background: #1d1b31;
+  transition: all 0.5s ease;
+}
+
+.sidebar.close .profile-details img {
+  padding: 10px;
+}
+
+.sidebar .profile-details .profile_name,
+.sidebar .profile-details .job {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.sidebar.close .profile-details i,
+.sidebar.close .profile-details .profile_name,
+.sidebar.close .profile-details .job {
+  display: none;
+}
+
+.sidebar .profile-details .job {
+  font-size: 12px;
+}
+
+
+/* -----------------------------HOME STYLING------------------------- */
+.home-section {
+  position: relative;
+  background: #E4E9F7;
+  left: 220px;
+  width: calc(100% - 220px);
+  transition: all 0.5s ease;
+}
+
+
+.sidebar.close~.home-section {
+  left: 78px;
+  width: calc(100% - 78px);
+}
+
+.home-section .home-content {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.home-section .home-content .bx-menu,
+.home-section .home-content .text {
+  color: #11101d;
+  font-size: 35px;
+}
+
+.home-section .home-content .bx-menu {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.home-section .home-content .text {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* -----------------------------HOME CONTENT STYLING------------------------- */
+.home-main-content {
+  height: 66vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  margin-right: 60px;
+  align-items: center;
+}
+
+
+.home-main-content .home-button {
+  background-color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 2px;
+  color: #11101d;
+
+}
+
+.home-button:hover {
+  color: #4a505d;
+}
+
+
+.home-main-content h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #E4E9F7;
+  margin-bottom: 25px;
+}
+
+.home-main-content h2 {
+  font-size: 55px;
+
+}
+
+
+.home-main-content img {
+  width: 300px;
+}
+
+
+.home-content .bx-menu {
+  color: #fff;
+
+}
+
+.bg-black {
+  background-color: #030307;
+  color: white;
+}
+
+
+.home-main-content .left-section {
+  width: 115%;
+}
+
+.home-main-content .right-section {
+  margin-left: 85px;
+}
+
+
+
+
+
+
+
+/* -----------------------------GLOBAL STYLING------------------------- */
+.all-section {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  overflow-x: hidden;
+  margin-right: 20px;
+
+}
+
+.horizontal-line {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* -------------List Project Card Styling--------------- */
+
+
+
+.parent-container {
+  margin-right: 30px;
+}
+
+
+.parent-container .no-projects {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent-container .no-projects p {
+  font-size: 14px;
+  color: rgb(202, 198, 198);
+}
+
+.parent-container .no-projects p>a {
+  text-decoration: none;
+  color: rgb(212, 0, 255);
+}
+
+
+.create-project-container {
+  margin: 30px;
+}
+
+
+.dash-projects-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 30px;
+}
+
+
+
+
+
+.list-item {
+  height: 170px;
+  width: 230px;
+  background-color: #010102;
+  box-shadow: rgba(51, 50, 50, 0.05) 0px 0px 0px 1px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.list-item .list-item-text h4 {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.list-item .list-item-text p {
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 0px;
+  line-height: 15px;
+  font-weight: 300;
+}
+
+.list-item .list-item-text span {
+  font-size: 10px;
+  color: #848282;
+
+}
+
+.list-item .list-item-btn .open-btn {
+  background-color: #27bf01;
+  border: none;
+  border-radius: 2px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: 500;
+
+}
+
+.list-item .list-item-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item .list-item-btn .open-btn:hover {
+  background-color: #05a440;
+}
+
+.list-item .list-item-btn i {
+  color: #ce2222;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------Project section dashboard------------------- */
+
+
+
+
+/* ---Sidebar styling */
+.dashboard-component .dashboard-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background: #010102;
+  z-index: 100;
+  transition: all 0.5s ease;
+
+}
+
+
+.dashboard-component .dashboard-sidebar-task{
+  width: 220px;
+}
+
+
+.dashboard-sidebar .app-logo {
+  height: 70px;
+  padding-left: 30px;
+  background-color: #030307;
+  display: flex;
+  align-items: center;
+
+}
+
+.dashboard-sidebar .app-logo h1 {
+  margin: 0px;
+  margin-bottom: 0px;
+}
+
+
+.dashboard-sidebar .dash-project-info {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+
+}
+
+.dashboard-sidebar .dash-project-info .project-info {
+  height: 500px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-right: 30px;
+}
+
+.dashboard-sidebar .logout {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: #010102;
+  padding-left: 30px;
+}
+
+
+.dashboard-sidebar .logout .back-btn {
+  padding: 5px 10px;
+  background-color: aliceblue;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dashboard-sidebar .logout .back-btn:hover {
+  background-color: #b1adad;
+}
+
+.dashboard-sidebar .dash-project-info .project-info h4 {
+  margin-bottom: 10px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.dashboard-sidebar .dash-project-info .project-info .project-info-deadline {
+  font-size: 10px;
+  margin-top: -5px;
+  color: #908989;
+}
+
+
+.dashboard-sidebar .dash-project-info .project-info .project-info-importance {
+  font-size: 13px;
+  margin-top: 5px;
+  color: #00ff55;
+}
+
+
+.dashboard-sidebar .dash-project-info .project-info .project-info-description h5 {
+  margin-bottom: 5px;
+}
+
+.dashboard-sidebar .dash-project-info .project-info .project-info-description p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #848282;
+  line-height: 20px;
+}
+
+
+
+/* ----------------SUBMITTED TASKS STYLING----------------- */
+
+.submitted-tasks {
+  padding-top: 40px;
+}
+
+.submitted-tasks-list {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------SCROLLBAR STYLING-------------- */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #908989;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.menu-iocn {
+  cursor: pointer;
+}
+
+/* ----Home section styling */
+.dash-home-section {
+  position: relative;
+  left: 250px;
+  width: calc(100% - 250px);
+  transition: all 0.5s ease;
+  height: 120vh;
+}
+
+.dash-home-section-task{
+  left: 220px;
+  width: calc(100% - 220px);
+}
+
+.close-home {
+  left: 160px;
+  width: calc(100% - 160px);
+}
+
+
+.dashboard-component .close {
+  width: 160px;
+}
+
+
+/* ---Dashboard navbar */
+
+.dash-home-section .dashboard-navbar {
+  height: 70px;
+  display: flex;
+  background: #030307;
+  /* justify-content: start; */
+  align-items: center;
+
+}
+
+.dash-home-section .main-dash-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #11101d;
+
+}
+
+
+
+
+
+
+
+
+.dash-home-section .main-dash-navbar .user-profile {
+  margin-right: 15px;
+}
+
+
+.dash-home-section .create-project-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  background-color: rgb(22, 21, 21);
+}
+
+
+
+
+
+/* -------PROJECT COMPONENT STYLING-------------- */
+
+.create-task-component {
+  padding-top: 40px;
+  padding-left: 30px;
+}
+
+
+.create-task-form {
+  height: 58vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+/* --------------------------MODAL STYLING------------------ */
+
+
+/* Modal styles */
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 58%;
+  right: auto;
+  bottom: auto;
+  margin-right: -42%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: white;
+  padding: 5px 5px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  color: black;
+}
+
+
+.Modal-big-screen {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  right: auto;
+  bottom: auto;
+  margin-right: -48%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  color: black;
+}
+
+.Modal--open {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.Overlay--open {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-content .h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+
+}
+
+.modal-content .h3 h3 {
+  margin: 5px;
+}
+
+.modal-content .task-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+  margin-bottom: 30px;
+  width: 85%;
+}
+
+
+.modal-content .task-form input,
+select,
+textarea {
+  margin: 5px 0px;
+  padding: 6px 5px;
+}
+
+
+.modal-content .task-form .task-fields {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.modal-content .task-form .task-fields textarea {
+  border: 1px solid grey;
+  width: 298px;
+}
+
+.modal-content .task-form .task-fields .required {
+  color: red;
+}
+
+.modal-content .task-form .task-fields label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+.modal-content .task-form button {
+  background-color: #27bf01;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 40%;
+  margin-top: 5px;
+
+}
+
+
+
+
+.modal-close-button {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+.create-task-btn {
+  background-color: #27bf01;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------TASK PAGE STYLING------------------- */
+
+
+
+
+
+
+
+
+/* -------------TASK NAVBAR-------------- */
+
+/* .task-invite-user-btn{
+
+} */
+
+
+
+
+
+
+
+
+
+
+/* ------SHARE MODAL STYLING---------- */
+/* Modal styles */
+.ShareModal {
+  position: absolute;
+  top: 20%;
+  left: 87%;
+  right: auto;
+  bottom: auto;
+  margin-right: -13%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: white;
+  padding: 5px 5px;
+  border-radius: 3px;
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  color: black;
+}
+
+
+.ShareModal--open {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.ShareOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.ShareOverlay--open {
+  opacity: 1;
+}
+
+.modal-content .share-invite-link-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 20px 20px;
+  margin-top: -10px;
+}
+
+.modal-content .share-invite-link-box .share-invite-view-only {
+  margin-top: -5px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+
+
+.modal-content .share-invite-link-box .share-invite-copy-link input {
+  padding: 5px 0px;
+  width: 240px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+}
+
+.modal-content .share-invite-link-box .share-invite-copy-link button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 2px;
+  background-color: #27bf01;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-content .share-invite-link-box .share-invite-copy-link button:hover {
+  background-color: #05a440;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------CODE-EDTIOR COMPONENT STYLING---------- */
+
+
+/* -------Task sidebar details----- */
+
+/* 
+.task-connected-users{
+
+} */
+
+.task-connected-users .task-connected-users-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.task-connected-users .task-connected-users-list .task-connected-user-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.task-connected-users .task-connected-users-list .task-connected-user-box span {
+  font-size: 10px;
+  padding-top: 5px;
+}
+
+
+/* ----------------TASK Dashboard navbar style----------- */
+
+
+.task-dashboard-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-dashboard-navbar .task-share-btn {
+  margin-right: 20px;
+}
+
+.task-dashboard-navbar .task-share-btn .task-invite-user-btn i {
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  padding-right: 5px;
+}
+
+.task-dashboard-navbar .task-share-btn .task-invite-user-btn {
+  background-color: #27bf01;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.task-dashboard-navbar .task-share-btn .task-invite-user-btn:hover {
+  background-color: #209e00;
+}
+
+
+/* ------ Task Logout section ------------ */
+
+
+.task-sidebar-content .task-logout-section {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: #010102;
+  padding-left: 30px;
+}
+
+
+.task-sidebar-content .task-logout-section .leave-task-btn {
+  padding: 5px 8px;
+  background-color: red;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0px 5px;
+}
+
+.task-sidebar-content .task-logout-section .leave-task-btn:hover {
+  background-color: rgb(209, 3, 3);
+}
+
+
+.task-sidebar-content .task-logout-section .submit-task-btn {
+  background-color: #27bf01;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+/* -----------------CODE EDITOR SECTION--------------- */
+
+.task-page-content .code-editor-and-chat-section {
+  display: flex;
+
+}
+
+.code-editor {
+  width: 65%;
+}
+
+.code-editor .editor-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.code-editor .editor-controls .left-editor-controls {
+  display: flex;
+  align-items: center;
+}
+
+.code-editor .editor-controls .left-editor-controls .editor-language-selector {
+  padding: 5px 20px;
+  border-radius: 2px;
+}
+
+.code-editor .editor-controls .left-editor-controls select>option {
+  padding: 15px 20px;
+}
+
+.code-editor .editor-controls .right-editor-controls .save-button .code-save-btn {
+  background-color: #f3eeee;
+  border: 1px solid rgb(183, 196, 6);
+  color: black;
+  padding: 8px 16px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 12px;
+  margin: 0px 5px;
+  opacity: 1;
+}
+
+
+.code-editor .editor-controls .right-editor-controls .save-button .code-save-btn:hover {
+  background-color: #d6d5cd;
+}
+
+.code-editor .editor-controls .right-editor-controls {
+  display: flex;
+}
+
+
+.code-editor .editor-controls .right-editor-controls .code-run-btn {
+  background-color: #27bf01;
+  color: black;
+  border: none;
+  padding: 6px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.code-editor .editor-controls .right-editor-controls .code-run-btn .anchor {
+  text-decoration: none;
+  color: black;
+}
+
+.code-editor .editor-controls .right-editor-controls .code-run-btn:hover {
+  background-color: #04d94b;
+}
+
+
+
+
+/* output section */
+
+.task-page-content .output-window {
+  height: 70vh;
+  margin-right: 20px;
+  overflow-y: scroll;
+  background-color: rgb(247, 244, 244);
+  margin-top: 10px;
+
+}
+
+
+.task-page-content .output-window .output-area {
+
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* -----------Chat Section styling---- */
+
+.task-page-content .task-chat-section {
+  display: flex;
+  height: 78vh;
+  background-color: rgb(5, 20, 31);
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-top: 39px;
+}
+
+
+
+.task-chat-section .chat__section {
+  background: #fff;
+}
+
+.brand {
+  /* padding: 20px; */
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+}
+
+.brand h1 {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #444;
+  margin-left: 10px;
+}
+
+.message__area {
+  height: 347px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-top: 40px;
+}
+
+
+textarea {
+  width: 318px;
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  outline: none;
+  background-color: floralwhite;
+  background: #FBFBFB;
+  overflow-x: hidden;
+
+}
+
+.message {
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  max-width: 300px;
+  position: relative;
+}
+
+
+.incoming {
+  background: #8F8BE8;
+  color: #fff;
+  margin-right: auto;
+
+}
+
+.outgoing {
+  background: #e9eafd;
+  color: #787986;
+  margin-left: auto;
+}
+
+.message h4 {
+  position: absolute;
+  top: -20px;
+  /* right: 24px; */
+  color: #474747;
+  font-size: 10px;
+  font-weight: 500;
+  padding-top: 27px;
+  left: 20px;
+  margin-right: 20px;
+}
+
+.message p {
+  padding-right: 10px;
+}
+
+
+
+
+/* -------------------Whiteboard section styling-------------- */
+
+
+.whiteboard-section {
+  height: 115vh;
+  background-color: white;
+  color: black;
+  margin-right: 20px;
+  margin-top: 10px;
+
+}
+
+
+.whiteboard-section .whiteboard-heading h3 {
+  margin: 0px;
+  padding-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------Dashboard Settings ----------------------- */
+
+.user-settings {
+  margin-left: 40px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.user-settings .user-details-form {
+  display: flex;
+}
+
+.user-settings .user-details-form .right-details {
+  margin-left: 20px;
+}
+
+.user-settings .user-details-form .input-box {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+
+.user-settings .user-details-form .input-box label {
+  margin-bottom: 5px;
+  font-size: 11px;
+}
+
+.user-settings .user-details-form .input-box input {
+  width: 300px;
+  padding: 5px 5px;
+  outline: #9dd4dd;
+}
+
+
+.user-settings .user-details-form .input-box #email {
+  background-color: rgb(243, 241, 241);
+  outline: none;
+  border: none;
+  padding: 6px 5px;
+  width: 302px;
+
+
+}
+
+.user-settings .user-details-form .update-details-btn {
+  background-color: #27bf01;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  margin-top: 10px;
+}
+
+.user-settings .user-details-form .logout-btn {
+  background-color: #bf0101;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 13px;
+}
+
+
+
+
+/* ------------------------Create Project Form Styling-------------------- */
+
+
+
+.project-form {
+  margin-left: 40px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.project-form .project-details-form {
+  display: flex;
+}
+
+.project-form .project-details-form .right-details {
+  margin-left: 20px;
+}
+
+.project-form .project-details-form .input-box {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+
+.project-form .project-details-form .input-box #deadline {
+  padding: 5px 5px;
+}
+
+
+.project-form .project-details-form .input-box #importance {
+  padding: 5.5px 5px;
+  margin-top: 0px;
+}
+
+
+.project-form .project-details-form .input-box #description {
+  padding: 5px 5px;
+  margin-top: 0px;
+  height: 100px;
+  width: 304px;
+}
+
+
+
+.project-form .project-details-form .input-box label {
+  margin: 5px 0px;
+  font-size: 11px;
+}
+
+.project-form .project-details-form .input-box input {
+  width: 300px;
+  padding: 6px 5px;
+  outline: #9dd4dd;
+}
+
+
+
+.project-form .project-details-form .left-details .project-form-buttons .create-project-btn {
+  background-color: #27bf01;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.required {
+  color: rgb(255, 127, 127);
+}

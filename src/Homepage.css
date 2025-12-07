@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+
+.wrapper {
+  margin: 0px 20px;
+}
+
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #010102;
+  position: sticky;
+  top: 0;
+  padding: 0px 20px;
+
+}
+
+.navbar .right ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.navbar .right ul li {
+  list-style: none;
+  margin: 5px 6px;
+  font-size: 12px;
+  line-height: 1.538em;
+  font-weight: 500;
+}
+
+.navbar .right ul li a {
+  color: white;
+  text-decoration: none;
+
+}
+
+
+.navbar .right .nav-items-btn {
+  display: flex;
+
+}
+
+.login-button {
+  text-align: center;
+  font-weight: 600;
+  display: block;
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+  background-color: #27bf01;
+
+  padding: 6px 15px;
+}
+
+.login-button:hover {
+  background-color: #02a739;
+
+}
+
+.signup-button {
+  text-align: center;
+  font-weight: 600;
+  display: block;
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+  background-color: #27bf01;
+
+  padding: 6px 15px;
+
+}
+
+.signup-button:hover {
+  background-color: #02a739;
+
+}
+
+.logo{
+  font-size: 25px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: rgb(235, 231, 231);
+  font-weight: 700;
+  display: flex;
+}
+
+.logo-icon {
+  width: 1px;
+  background-color: #27bf01;
+  padding: 0px 6px;
+  height: 20px;
+  margin: 8px 2px;
+}
+
+
+/* ------------TOP navbar--- */
+
+.top-navbar {
+  height: 20px;
+  background-color: #010102;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding: 5px 25px;
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------MAIN-------------------- */
+
+.section-1 {
+  height: 87vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+
+
+}
+
+.section-1 .main-heading {
+  text-align: center;
+  font-size: 55px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.section-1 .main-caption {
+  text-align: center;
+  color: rgb(177, 172, 172);
+  font-size: 16px;
+  margin-top: 5px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+
+.section-1 .section-1-btn button {
+  text-align: center;
+  /* font-weight: 600; */
+  display: block;
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+  background-color: #27bf01;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.section-1 .section-1-btn button:hover {
+  background: rgb(6, 137, 50);
+
+}
+
+
+
+/* -----------------SIGNUP------------------ */
+
+.container-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 92vh;
+
+
+}
+
+
+.auth-form {
+  background-color: rgb(7, 7, 20);
+  padding: 50px 40px;
+  border-radius: 5px;
+}
+
+
+.form-input {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-input input {
+  padding: 10px 0px;
+  margin: 8px 0px;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding-left: 10px;
+  outline: none;
+}
+
+
+
+.form-input input::value {
+  padding-left: 10px;
+}
+
+
+
+.form-input .auth-btn {
+  margin: 8px 0px;
+  width: 100px;
+  padding: 10px 0px;
+  cursor: pointer;
+  background-color: #0BDA51;
+  border: 1px solid black;
+
+
+
+}
+
+
+
+
+
+/* ------------------HOME COMPILER SYTLING----------------- */
+
+
+.all-editor-content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.all-editor-content .code-editor {
+  width: 68%;
+}
+
+.all-editor-content .dashboard-compiler-output {
+  width: 300px;
+  max-width: 320px;
+}
+
+
+
+.all-editor-content .home-compiler-output {
+  width: 384px;
+}
+
+.all-editor-content .home-compiler-output h3 {
+  margin: 0;
+  margin-bottom: 12px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+
+.dashboard-compiler-output h3 {
+  margin: 0;
+  margin-bottom: 12px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------ABOUT SECTION STYLING-------------------- */
+
+.about-section {
+  margin: 30px 130px;
+  height: 72vh;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-section .about-heading{
+  margin-top: 0px;
+}
+
+.about-section .about-content {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+
+}
+
+.about-section .about-content p{
+  color: rgb(206, 203, 203);
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+/* -------------SERVICES SECTION----------------- */
+
+.services-section {
+  height: 62vh;
+  margin: 50px 130px;
+}
+
+.services-section .services-section-heading{
+  margin-top: 80px;
+}
+
+.services-section .services-content{
+  display: flex;
+
+
+}
+
+
+.services-section .services-content .services-cards{
+  background-color: aliceblue;
+  color: white;
+  margin: 10px 0px;
+  margin-right: 20px;
+  color: black;
+  padding: 20px;
+  border-radius: 3px;
+  width: 220px;
+}
+
+
+.services-section .services-content .services-cards p{
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------FOOTER STYLING--------------------- */
+
+.footer {
+  height: 60px;
+  background-color: #010102;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+
+}
+
+.footer p {
+  font-weight: 600;
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+}
+
+.footer .right i {
+  margin-left: 5px;
+}
+
+.footer .right a {
+  color: rgb(240, 186, 240);
+}
